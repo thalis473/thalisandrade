@@ -1,0 +1,41 @@
+
+
+footer{
+    width: 100%;
+    height: 2.8rem;
+    background: #525252;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #3d72b4, #525252);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #3d72b4, #525252); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.footer-content p{
+    
+    width: 50%;
+    font-family: var(--font-primary) ;
+    color: white;
+    font-size: 1.2rem;
+    margin-left: 33%;
+}
+
+
+
+#link-topo{
+    position: fixed;
+    right:  3rem;
+    bottom: 3rem;
+    width: 3rem;
+    height: 3rem;
+    background: #525252;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #3d72b4, #525252);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #3d72b4, #525252); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: .3rem;
+    box-shadow: 0 0 .1rem 0.2rem  #3d72b4;
+}
