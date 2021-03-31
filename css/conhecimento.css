@@ -1,0 +1,208 @@
+
+
+.sessao-conhecimentos{
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 107vh;
+    
+}
+
+.tab-pane {
+    color:  white;
+    font-size: 1.2rem;
+    font-family: var(--font-secondary);
+}
+.nav-link{
+	font-family: var(--font-action);
+	font-weight: bold;
+	color:#3d72b4;
+	font-size: 1.5rem;
+}
+
+table{
+	color: #8e9eab;  /* fallback for old browsers */
+	color: -webkit-linear-gradient(to left, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+	color: linear-gradient(to left, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: var(--font-action);
+    border-radius: 10px;
+    font-weight: bold;
+	box-shadow: 2px 2px 4px 4px  #3d72b4; 
+}	
+
+
+
+
+.code{
+	padding: 6px;	
+	font-weight: bold;
+    font-size: 14px;
+    
+
+}
+.regresso{
+	width: 200px;
+	padding: 5px;
+}
+
+
+
+.bar{
+	background-color: white;/*barra*/
+	display: block;
+	height: 10px;
+	border-radius: 4px;
+	overflow: hidden;
+
+}
+
+.bar span{
+	height:10px;
+	float: left;
+	background-color:#3d72b4; 
+
+}
+
+
+
+.html{
+	width: 90%;
+	animation: html 4s;
+}
+
+.css{
+	width: 70%;
+	animation: css 4s;
+}
+
+.boots{
+	width: 85%;
+	animation: boots 4s;
+}
+
+
+.javas{
+	width: 70%;
+	animation: javas 4s;
+}
+
+.nodejs{
+	width: 67%;
+	animation: nodejs 4s;
+}
+
+.react{
+	width: 65%;
+	animation: react 5s;
+}
+
+.php{
+	width: 40%;
+	animation: php 4s;
+}
+
+.sql{
+	width: 50%;
+	animation: sql 4s;
+}
+
+
+
+@keyframes html{
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 90%;
+	}
+}
+
+
+@keyframes css{
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 80%;
+	}
+}
+
+@keyframes boots{
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 85%;
+	}
+}
+@keyframes javas{
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 60%;
+	}
+}
+
+
+
+@keyframes nodejs{
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 40%;
+	}
+}
+
+@keyframes react{
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 50%;
+	}
+}
+
+@keyframes sql{
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 70%;
+	}
+}
+
+@keyframes php{
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 60%;
+	}
+}
+
+@media  (max-width: 992px) {
+
+	.tab-pane {
+		color:  white;
+		font-size: 1rem;
+		font-family: var(--font-secondary);
+	}
+	.nav-link{
+		font-family: var(--font-action);
+		font-weight: bold;
+		color:#3d72b4;
+		font-size: 1.2rem;
+	}
+	
+}
+

@@ -1,0 +1,197 @@
+.sessao-contato{
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh;
+    width: 100%;
+    
+}
+
+
+.sessao-contato{
+    width: 100%;
+    height: 90vh;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contato-wrapper{
+    width: 60%;
+    height: 30rem;
+    display: flex;
+box-shadow: 0 2rem 5rem rgba(0,0,0,0,5);
+
+}
+
+.contato-left{
+    width:35% ;
+    display: inline-block;
+    
+}
+.contato-right{
+   
+    width: 65%;
+    padding: 1rem 3rem  3rem 3rem;
+   
+}
+.sessao-contato h1{
+    text-align: center;
+    width: 100%;
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    font-weight: lighter;
+    color: blanchedalmond;
+}
+.sessao-contato form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-grup{
+   position: relative;
+
+}
+.field{
+    background: transparent;
+    border:none ;
+    width: 20rem;
+    font-size: 1.5rem;
+    font-family: var(--font-secondary);
+    border-bottom: 2px dashed gray;
+    height: 3rem;
+    outline: none;
+    margin: 2rem 0;
+}
+
+
+.field-label{
+    position: absolute;
+    left: 0;
+    top:1.2rem;
+    font-size: 1.2rem;
+    font-family: var(--font-secondary);
+    color: honeydew;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+/*o efeito ao clicar no input ea label subir*/
+.field:focus ~ label{
+  top:0;
+  font-size: 1rem;
+  color:#434343;
+  font-family: var(--font-action);
+}
+.input-grup textarea{
+    max-width: 25rem;
+    max-height: 3rem;
+}
+.field:focus{
+    border-bottom: 1px solid;
+    color: honeydew;
+}
+.btn-submit{
+    font-size:var(--font-action) ;
+    color:white;
+    text-transform: uppercase;
+    letter-spacing: .1rem; /*distancia entre as letras*/
+    background: #525252;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #3d72b4, #525252);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #3d72b4, #525252); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.social-listak{
+    
+    
+    height: 60vh;
+    font-size: 3rem;
+    text-align: center;
+    margin-top:40%;
+   
+}
+@media  (max-width: 992px) { 
+
+    .contato-right{
+   
+        width: 100%;
+        padding: 0 0  0 0;
+        margin-left: 7px;
+        
+       
+    }
+    .field{
+        background: transparent;
+        border:none ;
+        width: 7rem;
+        font-size: .5rem;
+        font-family: var(--font-secondary);
+        border-bottom: 1px dashed gray;
+        height: 2rem;
+        outline: none;
+        margin: 2rem 0;
+    }
+    .contato-left{
+        width:100% ;
+       
+        margin-right: 10px;
+        
+    }
+    .sessao-contato{
+      
+        width: 100%;
+        height: 90vh;
+       
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .sessao-contato form{
+       
+        width: 40%;
+        display:inline-block;
+        margin-right: 50%;
+    }
+    .field-label{
+        position: absolute;
+        left: 0;
+        top: .2rem;
+        font-size: .9rem;
+        font-family: var(--font-secondary);
+        color: honeydew;
+        
+        transition: all 0.3s;
+    }
+    .btn-submit{
+        font-size:var(--font-action) ;
+        color:white;
+        text-transform: uppercase;
+        letter-spacing: .1rem; /*distancia entre as letras*/
+        background: #525252;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #3d72b4, #525252);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #3d72b4, #525252); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+        padding: .5rem 1.5rem;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        
+    }
+    .social-listak{
+    
+    
+        height: 60vh;
+        font-size: 3rem;
+        text-align: center;
+        margin-top:40%;
+       
+    }
+
+}
