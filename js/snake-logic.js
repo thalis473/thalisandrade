@@ -1,4 +1,5 @@
-export const GRID_SIZE = 20;
+export const GRID_COLUMNS = 30;
+export const GRID_ROWS = 20;
 export const POINTS_PER_FOOD = 10;
 export const STATUS = Object.freeze({
   READY: "ready",
@@ -23,8 +24,8 @@ function isSamePosition(first, second) {
 
 function listFreeCells(snake) {
   const cells = [];
-  for (let y = 0; y < GRID_SIZE; y += 1) {
-    for (let x = 0; x < GRID_SIZE; x += 1) cells.push({ x, y });
+  for (let y = 0; y < GRID_ROWS; y += 1) {
+    for (let x = 0; x < GRID_COLUMNS; x += 1) cells.push({ x, y });
   }
   return cells.filter((cell) => !snake.some((part) => isSamePosition(part, cell)));
 }
@@ -36,8 +37,9 @@ export function placeFood(snake, random) {
 }
 
 function createInitialSnake() {
-  const middle = Math.floor(GRID_SIZE / 2);
-  return Array.from({ length: INITIAL_LENGTH }, (_, index) => ({ x: middle - index, y: middle }));
+  const middleX = Math.floor(GRID_COLUMNS / 2);
+  const middleY = Math.floor(GRID_ROWS / 2);
+  return Array.from({ length: INITIAL_LENGTH }, (_, index) => ({ x: middleX - index, y: middleY }));
 }
 
 export function createInitialState(random) {
@@ -59,7 +61,7 @@ export function queueDirection(state, directionName) {
 }
 
 function isOutsideGrid({ x, y }) {
-  return x < 0 || y < 0 || x >= GRID_SIZE || y >= GRID_SIZE;
+  return x < 0 || y < 0 || x >= GRID_COLUMNS || y >= GRID_ROWS;
 }
 
 function hitsBody(head, snake) {

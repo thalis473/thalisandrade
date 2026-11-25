@@ -1,4 +1,4 @@
-import { GRID_SIZE } from "./snake-logic.js";
+import { GRID_COLUMNS, GRID_ROWS } from "./snake-logic.js";
 
 const CELL_GAP_PX = 2;
 const FOOD_RADIUS_RATIO = 0.35;
@@ -16,10 +16,8 @@ function drawBackground(context, canvas, palette, cellSize) {
   context.fillStyle = palette.background;
   context.fillRect(0, 0, canvas.width, canvas.height);
   context.strokeStyle = `rgba(255, 255, 255, ${GRID_LINE_ALPHA})`;
-  for (let index = 1; index < GRID_SIZE; index += 1) {
-    context.strokeRect(index * cellSize, 0, 0, canvas.height);
-    context.strokeRect(0, index * cellSize, canvas.width, 0);
-  }
+  for (let column = 1; column < GRID_COLUMNS; column += 1) context.strokeRect(column * cellSize, 0, 0, canvas.height);
+  for (let row = 1; row < GRID_ROWS; row += 1) context.strokeRect(0, row * cellSize, canvas.width, 0);
 }
 
 function drawCell(context, position, cellSize, color) {
@@ -42,7 +40,7 @@ function drawFood(context, food, cellSize, color) {
 
 export function createRenderer(canvas) {
   const context = canvas.getContext("2d");
-  const cellSize = canvas.width / GRID_SIZE;
+  const cellSize = canvas.width / GRID_COLUMNS;
   const palette = readPalette(canvas);
   return {
     draw(state) {

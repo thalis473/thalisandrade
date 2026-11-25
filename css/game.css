@@ -3,7 +3,7 @@
 .game .lead { margin-inline: auto; }
 
 .game-panel {
-  display: inline-grid; gap: 14px; justify-items: center; width: min(100%, 440px);
+  display: inline-grid; gap: 14px; justify-items: center; width: min(100%, 660px);
   padding: 18px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
   box-shadow: 0 0 40px rgba(0, 240, 255, 0.15), inset 0 0 30px rgba(255, 43, 214, 0.06);
 }
@@ -13,7 +13,7 @@
 .game-hud strong { color: var(--lime); }
 
 #snake-canvas {
-  width: 100%; max-width: 400px; aspect-ratio: 1; background: var(--bg);
+  width: 100%; max-width: 600px; aspect-ratio: 3 / 2; background: var(--bg);
   border: 2px solid var(--cyan); border-radius: 10px; box-shadow: 0 0 24px rgba(0, 240, 255, 0.35);
   touch-action: none; image-rendering: pixelated;
 }

@@ -2,7 +2,8 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 
 import {
-  GRID_SIZE,
+  GRID_COLUMNS,
+  GRID_ROWS,
   POINTS_PER_FOOD,
   STATUS,
   createInitialState,
@@ -50,7 +51,7 @@ test("eating food grows the snake and scores", () => {
 });
 
 test("hitting a wall ends the game", () => {
-  const state = running({ snake: [{ x: GRID_SIZE - 1, y: 0 }, { x: GRID_SIZE - 2, y: 0 }], food: { x: 0, y: 5 } });
+  const state = running({ snake: [{ x: GRID_COLUMNS - 1, y: 0 }, { x: GRID_COLUMNS - 2, y: 0 }], food: { x: 0, y: 5 } });
   assert.equal(stepGame(state, alwaysFirst).status, STATUS.GAME_OVER);
 });
 
@@ -67,9 +68,9 @@ test("moving into the cell the tail just left is allowed", () => {
 });
 
 test("placeFood returns null when the board is full", () => {
-  const fullBoard = Array.from({ length: GRID_SIZE * GRID_SIZE }, (_, index) => ({
-    x: index % GRID_SIZE,
-    y: Math.floor(index / GRID_SIZE),
+  const fullBoard = Array.from({ length: GRID_COLUMNS * GRID_ROWS }, (_, index) => ({
+    x: index % GRID_COLUMNS,
+    y: Math.floor(index / GRID_COLUMNS),
   }));
   assert.equal(placeFood(fullBoard, alwaysFirst), null);
 });
