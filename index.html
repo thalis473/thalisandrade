@@ -1,319 +1,279 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--css-->
-    <link rel="stylesheet" href="./global.css">
-    <link rel="stylesheet" href="./css/home.css">
-    <link rel="stylesheet" href="./css/bio.css">
-    <link rel="stylesheet" href="./css/conhecimento.css">
-    <link rel="stylesheet" href="./css/projetos.css">
-    <link rel="stylesheet" href="./css/formulario.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <!--boodstrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <title>Thalis Andrade</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+  <title>Thalis Andrade | Desenvolvedor Full Stack, IA e Automação</title>
+  <meta name="description" content="Desenvolvedor full stack: sites, bots de IA e automação de processos para empresas. Aulas particulares para quem está começando em programação.">
+  <meta name="theme-color" content="#07070f">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Thalis Andrade | Desenvolvedor Full Stack, IA e Automação">
+  <meta property="og:description" content="Sites, bots de IA e automação de processos. Fale comigo pelo WhatsApp.">
+  <meta property="og:image" content="https://thalis473.github.io/thalisandrade/img/thalis.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2307070f'/%3E%3Ctext x='16' y='22' font-size='16' font-family='monospace' font-weight='700' fill='%2300f0ff' text-anchor='middle'%3ETA%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/game.css">
+  <script type="module" src="js/main.js"></script>
 </head>
-<body >
-    <!--toda a pagina-->
-   <div class="global">
-         <!--botao do menu-->
-<div class="container-sidebar">
-    <div class="line" id="line1"></div>
-    <div class="line" id="line2"></div>
-    <div class="line" id="line3"></div>
-    <span>Fechar</span>
-</div>
+<body>
+  <a class="skip-link" href="#conteudo" data-i18n="skip">Ir para o conteúdo</a>
 
-    <header>
-        <!--imagem do fundo-->
-        <div class="img-wapp">
-            <img src="./img/home-principal.jpg" alt="">
+  <header class="site-header">
+    <nav class="nav container" aria-label="Principal" data-i18n-aria-label="nav.label">
+      <a class="brand" href="#inicio" aria-label="Thalis Andrade">&lt;TA/&gt;</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu" data-i18n-aria-label="nav.toggle">
+        <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+      </button>
+      <ul class="menu" id="menu">
+        <li><a href="#sobre" data-i18n="nav.about">Sobre</a></li>
+        <li><a href="#servicos" data-i18n="nav.services">Serviços</a></li>
+        <li><a href="#ia" data-i18n="nav.ai">IA</a></li>
+        <li><a href="#stack" data-i18n="nav.stack">Stack</a></li>
+        <li><a href="#projetos" data-i18n="nav.projects">Projetos</a></li>
+        <li><a href="#contato" data-i18n="nav.contact">Contato</a></li>
+        <li><button class="lang-toggle" type="button" id="lang-toggle" aria-label="Switch language" data-i18n="lang.toggle">EN</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <p class="eyebrow" data-i18n="hero.eyebrow">Desenvolvedor Full Stack · IA &amp; Automação</p>
+        <h1 class="glitch" data-text="Thalis Andrade">Thalis Andrade</h1>
+        <p class="hero-tagline" data-i18n="hero.tagline">Construo sites, bots de IA e automações que economizam tempo de verdade.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#contato" data-i18n="hero.cta.contact">Falar comigo</a>
+          <a class="button button-ghost" href="#servicos" data-i18n="hero.cta.services">O que eu faço</a>
         </div>
-        <div class="banner">
-            <h1> Web Developer</h1>
-            <p>Thalis Andrade</p>
-            <a href="#biografia">
-                <button> SAIBA MAIS</button>
-            </a>
-        </div>
-
-    </header>
-    <!--os componentes dentro do menu-->
-    <aside class="sidebar">
-        <nav>
-            <ul class="menu">
-                <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
-                <li class="menu-item"><a href="#biografia" class="menu-link">Biografia</a></li>
-                <li class="menu-item"><a href="#conhecimentos" class="menu-link">Conhecimentos</a></li>
-                <li class="menu-item"><a href="#projetos" class="menu-link">Projetos</a></li>
-                <li class="menu-item"><a href="#orcamentos" class="menu-link">Orçamentos</a></li>
-                
-            </ul>
-        </nav>
-        <!--icones dentro do menu na parte de baixo-->
-        <div class="social-media">
-            <a href="https://www.facebook.com/Thalis.P.Andrade/"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/thalisoficial/"><i class="fab fa-instagram"> </i></a>
-            <a href="https://twitter.com/thalisraridex"><i class="fab fa-twitter"></i></a>
-        </div>
-    </aside>
-
-    <section class="sessao-bio" id="biografia">
-        <div class="sessao-header">
-            <h1>Biografia</h1>
-        </div>
-        <div class="biografia">
-
-            <div id="home" class="row  m-2 ">
-
-                <div class="area-home-col col-12  col-md-6  d-flex  align-items-center justify-content-center"
-                  data-aos="fade-right">
-            
-                  <div class="text-center sub-tex" style="margin-bottom: 10%;">
-                    <img class="foto rounded-circle" width="150px" src="./img/thalis.jpg" alt="">
-
-                    <h5 class="mt-4">Thalis Andrade</h5>
-            
-                    <h5 class="mb-4">Desenvolvedor Full-stack</h5>
-            
-                        <table class=" table-style">
-                        <tbody>
-                            
-                            <tr>
-                            <td class="p-2 pl-3 " colspan="4"><b style="margin-right: 10px;">Formação :</b> Full Stack  | Recode
-                            </td>
-                            </tr>
-                
-                            <tr>
-                            <td class="p-2 pl-3 " colspan="4"><b style="margin-right: 10px;">Localização :</b> Itaborai / Rio de janeiro
-                            </td>
-                            </tr>
-                
-                            <tr class=" text-center">
-                            <td class="p-4 " style="font-size: 20px;">Curriculo : </td>
-                                <td class="p-4 "><a style="font-size: 20px;" href="./pdf/Thalis-Andrade.pdf"  download="Thalis-Andrade" type="application/pdf"   target="_blank" class="text-dark"><i class="fas fa-cloud-download-alt"></i></a>
-                                </td>
-                                <td class="p-4 "><a style="font-size: 20px;"  href="./pdf/Thalis-Andrade.pdf"  target="_blank"
-                                    class="text-dark"><i class="fas fa-eye"></i></a></td>
-                           
-                            </tr>
-                
-                
-                        </tbody>
-                        </table>
-            
-                  </div>
-           </div>
-           <div class=" col-sm-12 col-md-6  d-flex  align-items-center ">
-           <div class=" text-center" style="margin-bottom: 15%;" >
-            <p class="texto-sobremim px-1 ">
-                &nbsp;&nbsp; Seja bem vindo, sou um desenvolvedor júnior web, desenvolvo desde 2020, devido a uma oportunidade que tive, um curso intensivo, durante 6 meses a base de um formação Full Stack, desde então, me apaixonei pela area, e não pretendo mais sair dela, ainda tenho muito que aprender, afinal o conhecimento nessa area (Programação) não tem limite.
-                    Faço parte da comunidade open-source onde contribuo para diversos projetos públicos e privados.
-              </p>
-           </div>
-        </div>
-    </section>
-   
-    <section class="sessao-conhecimentos" id="conhecimentos">
-      <div class="sessao-header">
-        <h1>Conhecimentos</h1>
+        <ul class="stats">
+          <li><strong>5+</strong><span data-i18n="stat.years">anos atuando em tecnologia</span></li>
+          <li><strong>Web · Mobile · IA</strong><span data-i18n="stat.areas">do front ao back</span></li>
+          <li><strong data-i18n="stat.degree.title">Eng. de Software</strong><span data-i18n="stat.degree.text">graduação em andamento</span></li>
+        </ul>
       </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-                <h3>Habilidades Principais</h3>
-                    
-                <table >
-                    <tr>
-                      <td class=" code">HTML5</td>
-                      <td class=" regresso"><span class="bar"><span class="html"></span></span></td>
-                    </tr>
-                    <tr>
-                      <td class=" code">CSS</td>
-                      <td class=" regresso"><span class="bar"><span class="css"></span></span></td>
-                    </tr>
-                    <tr>
-                      <td class=" code">BOOTSTRAP</td>
-                      <td class=" regresso"><span class="bar"><span class="boots"></span></span></td>
-                    </tr>
-                    <tr>
-                      <td class=" code">JAVASCRIPT</td>
-                      <td class=" regresso"><span class="bar"><span class="javas"></span></span></td>
-                    </tr>
-                    <tr>
-                      <td class=" code">NODEJS</td>
-                      <td class=" regresso"><span class="bar"><span class="nodejs"></span></span></td>
-                    </tr>
-                    <tr>
-                      <td class=" code">REACT</td>
-                      <td class=" regresso"><span class="bar"><span class="react"></span></span></td>
-                    </tr>
-                    <tr>
-                      <td class=" code">PHP</td>
-                      <td class=" regresso"><span class="bar"><span class="php"></span></span></td>
-                    </tr>
-                    <tr>
-                      <td class=" code">SQL</td>
-                      <td class=" regresso"><span class="bar"><span class="sql"></span></span></td>
-                    </tr>
-                  </table>
-                  <br>
-            </div>
-           
-            <div class="col-sm"  >
-                 <h3>Conhecimentos Técnicos</h3>
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                        <li class="nav-item">
-                          <a class="nav-link active" id="tecnologias-tab" data-toggle="tab" href="#tecnologias" role="tab" aria-controls="tecnologias" aria-selected="true">Tecnologias</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" id="bancodedados-tab" data-toggle="tab" href="#bancodedados" role="tab" aria-controls="bancodedados" aria-selected="false">Banco de dados</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" id="mobile-tab" data-toggle="tab" href="#ferramenta" role="tab" aria-controls="ferramenta" aria-selected="false">Ferramentas</a>
-                        </li>
+    </section>
 
-                      </ul>
-                      <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="tecnologias" role="tabpanel" aria-labelledby="tecnologias-tab">Html, Css, Java script, Boodstrap, Scrum, PHP, Node,TypeScript, EcmaScripit, Json, Git, React, React Native, etc</div>
-                        <div class="tab-pane fade" id="bancodedados" role="tabpanel" aria-labelledby="bancodedados-tab">Modelagem de dados, SQL Server, MYSQL, MongoDB, Sequelize, Mongoose, Express, etc</div>
-                        <div class="tab-pane fade" id="ferramenta" role="tabpanel" aria-labelledby="ferramenta-tab">Visual Studio, Sublime Text ,Insomnia, MYSQL Workbench , Trello,Postman, etc
-                        </div>
-                    
-
-            </div>
+    <section class="section" id="sobre">
+      <div class="container about">
+        <div class="about-photo">
+          <img src="img/thalis.jpg" alt="Foto de Thalis Andrade" data-i18n-alt="about.photo" width="220" height="220">
         </div>
+        <div class="about-text">
+          <h2 class="section-title" data-i18n="about.title">Sobre mim</h2>
+          <p data-i18n="about.p1">Sou desenvolvedor full stack e há mais de 5 anos atuo em uma empresa de tecnologia, trabalhando com plataformas de dados, APIs, interfaces e nuvem. Hoje curso Engenharia de Software e uso IA no dia a dia para entregar mais rápido, sem abrir mão da qualidade.</p>
+          <p data-i18n="about.p2">Também ajudo quem está começando: dou aulas particulares e apoio quem ainda não sabe por onde entrar na área de programação.</p>
+          <p data-i18n="about.p3">Sou viciado em games, e isso explica o joguinho que você encontra no final da página.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="servicos">
+      <div class="container">
+        <h2 class="section-title" data-i18n="services.title">O que eu faço</h2>
+        <div class="cards">
+          <article class="card">
+            <h3 data-i18n="services.web.title">Sites e sistemas web</h3>
+            <p data-i18n="services.web.text">Do site institucional a sistemas completos: rápidos, responsivos e bem cuidados.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="services.bots.title">Bots e assistentes com IA</h3>
+            <p data-i18n="services.bots.text">Bots para atendimento e tarefas do dia a dia, integrados aos canais que você já usa.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="services.automation.title">Automação de processos</h3>
+            <p data-i18n="services.automation.text">Elimino tarefas repetitivas: planilhas, e-mails, integrações entre sistemas e rotinas.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="services.teaching.title">Aulas e mentoria</h3>
+            <p data-i18n="services.teaching.text">Aulas particulares para quem está começando em programação, no seu ritmo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ia">
+      <div class="container">
+        <h2 class="section-title" data-i18n="ai.title">IA no desenvolvimento</h2>
+        <p class="lead" data-i18n="ai.lead">A IA faz parte do meu fluxo de trabalho, sempre com revisão humana e atenção à qualidade do código.</p>
+        <div class="cards">
+          <article class="card card-accent">
+            <h3 data-i18n="ai.agents.title">Agentes que ajudam a construir</h3>
+            <p data-i18n="ai.agents.text">Uso agentes de IA para planejar, escrever, revisar e testar código com mais velocidade.</p>
+          </article>
+          <article class="card card-accent">
+            <h3 data-i18n="ai.bots.title">Bots no dia a dia</h3>
+            <p data-i18n="ai.bots.text">Crio bots para interações do cotidiano e automatizo processos que consomem tempo.</p>
+          </article>
+          <article class="card card-accent">
+            <h3 data-i18n="ai.community.title">Pensando na comunidade dev</h3>
+            <p data-i18n="ai.community.text">Trabalho com projetos de agentes pensados para contribuir com outros desenvolvedores.</p>
+          </article>
+        </div>
+        <p class="note" data-i18n="ai.note">Este site e o jogo no final da página foram feitos com apoio de IA.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="stack">
+      <div class="container">
+        <h2 class="section-title" data-i18n="stack.title">Stack e conhecimentos</h2>
+        <div class="stack-groups">
+          <div class="stack-group">
+            <h3 data-i18n="stack.languages">Linguagens</h3>
+            <ul class="tags"><li>Python</li><li>JavaScript</li><li>TypeScript</li><li>C++</li><li>Java</li><li>SQL</li></ul>
+          </div>
+          <div class="stack-group">
+            <h3 data-i18n="stack.web">Web</h3>
+            <ul class="tags"><li>HTML &amp; CSS</li><li>Vue.js</li><li>React</li><li>Node.js</li><li data-i18n="stack.tag.apis">APIs REST</li></ul>
+          </div>
+          <div class="stack-group">
+            <h3 data-i18n="stack.mobile">Mobile</h3>
+            <ul class="tags"><li>React Native</li><li data-i18n="stack.tag.apps">Apps multiplataforma</li></ul>
+          </div>
+          <div class="stack-group">
+            <h3 data-i18n="stack.data">Dados e nuvem</h3>
+            <ul class="tags"><li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li><li>Redis</li><li>AWS</li><li>Docker</li><li>CI/CD</li></ul>
+          </div>
+          <div class="stack-group">
+            <h3 data-i18n="stack.ux">UX e interfaces</h3>
+            <ul class="tags"><li>UX / UI</li><li data-i18n="stack.tag.responsive">Design responsivo</li></ul>
+          </div>
+          <div class="stack-group">
+            <h3 data-i18n="stack.practices">Boas práticas</h3>
+            <ul class="tags"><li>SOLID</li><li>Clean Code</li><li data-i18n="stack.tag.tests">Testes automatizados</li><li>Git</li><li data-i18n="stack.tag.ai">IA e agentes</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="trajetoria">
+      <div class="container">
+        <h2 class="section-title" data-i18n="journey.title">Trajetória</h2>
+        <ol class="timeline">
+          <li>
+            <span class="timeline-year">2020 – 2021</span>
+            <h3 data-i18n="journey.training.title">Formação Full Stack</h3>
+            <p data-i18n="journey.training.text">Curso intensivo de programação: HTML, CSS, JavaScript, Node.js, React, bancos de dados e Linux.</p>
+          </li>
+          <li>
+            <span class="timeline-year" data-i18n="journey.work.year">2021 – hoje</span>
+            <h3 data-i18n="journey.work.title">Engenharia de software</h3>
+            <p data-i18n="journey.work.text">Mais de 5 anos em uma empresa de tecnologia: APIs, microsserviços, interfaces, bancos de dados e nuvem.</p>
+          </li>
+          <li>
+            <span class="timeline-year">2025 – 2029</span>
+            <h3 data-i18n="journey.degree.title">Graduação em Engenharia de Software</h3>
+            <p data-i18n="journey.degree.text">Cursando, unindo a base acadêmica com a prática do mercado.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="projetos">
+      <div class="container">
+        <h2 class="section-title" data-i18n="projects.title">Projetos</h2>
+        <p class="lead" data-i18n="projects.lead">Estou construindo projetos novos, mais sólidos e atuais. Os antigos saíram do ar para dar lugar ao que vem aí.</p>
+        <div class="cards">
+          <article class="card project">
+            <span class="badge" data-i18n="projects.badge.building">Em construção</span>
+            <h3 data-i18n="projects.bots.title">Bots do dia a dia</h3>
+            <p data-i18n="projects.bots.text">Assistentes que automatizam interações e tarefas repetitivas.</p>
+            <ul class="tags"><li>Python</li><li>IA</li></ul>
+          </article>
+          <article class="card project">
+            <span class="badge" data-i18n="projects.badge.building">Em construção</span>
+            <h3 data-i18n="projects.agents.title">Agentes para a comunidade dev</h3>
+            <p data-i18n="projects.agents.text">Agentes de IA pensados para ajudar outros desenvolvedores.</p>
+            <ul class="tags"><li>IA</li><li data-i18n="projects.tag.agents">Agentes</li></ul>
+          </article>
+          <article class="card project">
+            <span class="badge badge-testing" data-i18n="projects.badge.testing">Em testes</span>
+            <h3>Email Cleaner</h3>
+            <p data-i18n="projects.cleaner.text">Ferramenta em Python que mostra o que mais ocupa sua caixa de e-mail e ajuda a limpá-la em massa, com versão para Windows.</p>
+            <ul class="tags"><li>Python</li><li data-i18n="projects.tag.automation">Automação</li></ul>
+          </article>
+        </div>
+        <p class="note"><a data-link="github" href="#" rel="noopener noreferrer" target="_blank" data-i18n="projects.github">Acompanhe no GitHub</a></p>
+      </div>
+    </section>
+
+    <section class="section" id="contato">
+      <div class="container contact">
+        <div class="contact-intro">
+          <h2 class="section-title" data-i18n="contact.title">Vamos conversar?</h2>
+          <p data-i18n="contact.lead">Conte o que você precisa. Ao enviar, o WhatsApp abre com a sua mensagem pronta para mim.</p>
+          <ul class="contact-links">
+            <li><a data-link="whatsapp" href="#" rel="noopener noreferrer" target="_blank">WhatsApp</a></li>
+            <li><a data-link="linkedin" href="#" rel="noopener noreferrer" target="_blank">LinkedIn</a></li>
+            <li><a data-link="github" href="#" rel="noopener noreferrer" target="_blank">GitHub</a></li>
+            <li><a data-link="email" href="#" hidden data-i18n="contact.email">E-mail</a></li>
+          </ul>
+        </div>
+        <form class="form" id="contact-form" novalidate>
+          <label class="field">
+            <span data-i18n="form.name">Seu nome</span>
+            <input type="text" name="name" maxlength="80" autocomplete="name" required>
+          </label>
+          <label class="field">
+            <span data-i18n="form.topic">Assunto</span>
+            <select name="topic">
+              <option data-i18n="form.topic.web">Site ou sistema web</option>
+              <option data-i18n="form.topic.bot">Bot com IA</option>
+              <option data-i18n="form.topic.automation">Automação de processos</option>
+              <option data-i18n="form.topic.teaching">Aulas e mentoria</option>
+              <option data-i18n="form.topic.other">Outro assunto</option>
+            </select>
+          </label>
+          <label class="field">
+            <span data-i18n="form.message">Mensagem</span>
+            <textarea name="message" rows="5" maxlength="1000" required></textarea>
+          </label>
+          <button class="button button-primary" type="submit" data-i18n="form.submit">Enviar pelo WhatsApp</button>
+          <p class="form-status" id="contact-status" role="status" aria-live="polite"></p>
+          <p class="form-note" data-i18n="form.note">Nada é armazenado neste site: a mensagem só é enviada se você apertar enviar no WhatsApp.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="jogo">
+      <div class="container game">
+        <h2 class="section-title" data-i18n="game.title">Jogue um pouco</h2>
+        <p class="lead" data-i18n="game.lead">Um Snake feito em JavaScript puro, com apoio de IA. Use as setas ou WASD, e no celular deslize o dedo no tabuleiro.</p>
+        <div class="game-panel" id="snake-panel" tabindex="0" aria-label="Jogo Snake" data-i18n-aria-label="game.label">
+          <div class="game-hud">
+            <span><span data-i18n="game.score">Pontos</span>: <strong id="snake-score">0</strong></span>
+            <span><span data-i18n="game.best">Recorde</span>: <strong id="snake-best">0</strong></span>
+          </div>
+          <canvas id="snake-canvas" width="400" height="400" aria-label="Tabuleiro do Snake" data-i18n-aria-label="game.board"></canvas>
+          <p class="game-status" id="snake-status" role="status" aria-live="polite"></p>
+          <div class="dpad" aria-label="Controles" data-i18n-aria-label="game.controls">
+            <button type="button" data-direction="up" aria-label="Cima" data-i18n-aria-label="game.up">▲</button>
+            <button type="button" data-direction="left" aria-label="Esquerda" data-i18n-aria-label="game.left">◀</button>
+            <button type="button" data-direction="down" aria-label="Baixo" data-i18n-aria-label="game.down">▼</button>
+            <button type="button" data-direction="right" aria-label="Direita" data-i18n-aria-label="game.right">▶</button>
+          </div>
+          <div class="game-actions">
+            <button class="button button-primary" type="button" id="snake-toggle"></button>
+            <button class="button button-ghost" type="button" id="snake-restart" data-i18n="game.restart">Reiniciar</button>
+          </div>
+        </div>
+        <p class="note" data-i18n="game.storage">O recorde fica salvo só no seu navegador. Nada é enviado para lugar nenhum.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© <span id="year">2026</span> Thalis Andrade</p>
+      <p data-i18n="footer.built">Feito com HTML, CSS e JavaScript puros, com apoio de IA.</p>
     </div>
-       
+  </footer>
 
-                                                                     
-
-    </section>
-    
-    <section class="sessao-projetos " id="projetos">
-        <div class="sessao-header">
-            <h1>Projetos</h1>
-        </div>
-      
-        
-        <div class="container-fluid caixa">
-
-            <div class="row ">
-
-              <div class="col-sm  coll-1">
-                
-                 <div class="card-projetos">
-                    <img class="img-projetos" src="./img/ecorenda.jpeg" alt="imagem do projeto loveU">
-                    <div class="info">
-                        <h2>Ecorenda</h2>
-                        <h3>React-Css-Redux-Boostrap-Mysql</h3>
-                        <br>
-                        <p>Site desenvolvido para auxiliar a coleta de produtos reciclaveis. </p>
-                    </div>
-                    <a href="https://thalis473.github.io/ecorenda/">
-                        <button class="button-saiba">Saiba mais</button>
-                    </a>
-                    
-                    
-                </div>
-                  
-                </div>
-             
-              <div class="col-sm  coll-2">
-                
-                <div class="card-projetos">
-                    <img class="img-projetos" src="./img/eletrorecode.jpeg" alt="imagem do projeto loveU">
-                    <div class="info">
-                        <h2>EletroRecode</h2>
-                        <h3>React-Css-Boostrap-Mysql</h3>
-                        <br>
-                        <p>loja de Eletrodomésticos virtual.</p>
-                    </div> 
-                    <a href="https://thalis473.github.io/Eletrorecode/">
-                        <button  class="button-saiba">Saiba mais</button>
-                    </a>
-                    
-                </div>
-              
-              </div>
-
-              <div class="col-sm  coll-3">
-                
-                <div class="card-projetos">
-                    <img class="img-projetos" src="./img/loveU.jpg" alt="imagem do projeto loveU"> 
-                    <div class="info">
-                        <h2>LoveU</h2>
-                        <h3>Php-Css-Boostrap-Mysql</h3>
-                       <br>
-                        <p>Loja de roupa virtual desenvolvida para o publico feminino.</p>
-                    </div>
-                    <a href="https://loveuloja.000webhostapp.com/index.php">
-                        <button class="button-saiba">Saiba mais</button>
-                    </a>
-                </div>
-               
-              </div>
-
-            </div>
-        </div>
-
-    </section>
-    <section class="sessao-contato" id="orcamentos">
-       
-        <div class="contato-wrapper">
-            <div class="contato-left">
-                <div class="social-listak">
-                    <ul >
-                        <li class="li-form"><a href="https://wa.me/5521979757714"><i class="fab fa-whatsapp"></i></a></li>
-                        <li class="li-form"><a href="https://github.com/thalis473"><i class="fab fa-github-alt"></i></a></li>
-                        <li class="li-form"><a href="https://twitter.com/thalisraridex"><i class="fab fa-twitter"> </i></a></li>
-    
-                    </ul>
-                   
-                </div>
-            </div>
-            <div class="contato-right">
-                <h1>Contato</h1>
-                <form action=""> 
-                 <div class="input-grup">
-                     <input type="text" class="field" id="nome">
-                     <label for="nome" class="field-label">Nome</label>
-                 </div>
-                 <div class="input-grup">
-                     <input type="text" class="field" id="email">
-                     <label for="email" class="field-label">E-mail</label>
-                 </div>
-                 <div class="input-grup">
-                     <textarea type="text" class="field" id="mensagem"></textarea>
-                     <label for="mensagem" class="field-label">Mensagem</label>
-                     </div>
-                     <button type="submit" class="btn-submit"> Enviar</button>
-                </form>
-            </div>
-        </div>
-         
-    </section>
-    
-    <footer>
-        <div class="footer-content">
-            <p>
-                Copyright &copy; 2021, THALIS -Todos os direitos reservados
-            </p>
-          
-        </div>
-    </footer>
-    <a href="#" id="link-topo">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-   </div>
-    <script type="text/javascript" src="./index.js"></script>
-     <!--boodstrap-->
-     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <noscript>
+    <p class="noscript">Este site usa JavaScript para o formulário, o idioma e o jogo. Fale comigo pelo <a href="https://www.linkedin.com/in/thalisandrade/">LinkedIn</a>.</p>
+  </noscript>
 </body>
 </html>

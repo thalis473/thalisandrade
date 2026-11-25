@@ -1,0 +1,36 @@
+.game { text-align: center; }
+.game .section-title::after { margin-inline: auto; }
+.game .lead { margin-inline: auto; }
+
+.game-panel {
+  display: inline-grid; gap: 14px; justify-items: center; width: min(100%, 440px);
+  padding: 18px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
+  box-shadow: 0 0 40px rgba(0, 240, 255, 0.15), inset 0 0 30px rgba(255, 43, 214, 0.06);
+}
+.game-panel:focus-visible { outline-offset: 6px; }
+
+.game-hud { display: flex; justify-content: space-between; width: 100%; font-family: var(--font-mono); color: var(--muted); }
+.game-hud strong { color: var(--lime); }
+
+#snake-canvas {
+  width: 100%; max-width: 400px; aspect-ratio: 1; background: var(--bg);
+  border: 2px solid var(--cyan); border-radius: 10px; box-shadow: 0 0 24px rgba(0, 240, 255, 0.35);
+  touch-action: none; image-rendering: pixelated;
+}
+
+.game-status { min-height: 1.4em; margin: 0; font-weight: 600; color: var(--magenta); }
+
+.dpad { display: none; grid-template-columns: repeat(3, 56px); grid-template-areas: ". up ." "left down right"; gap: 8px; }
+.dpad button {
+  font-size: 1.2rem; color: var(--cyan); background: var(--surface-2); border: 1px solid var(--border);
+  border-radius: 12px; height: 52px; cursor: pointer; touch-action: manipulation;
+}
+.dpad button:active { background: rgba(0, 240, 255, 0.2); }
+.dpad [data-direction="up"] { grid-area: up; }
+.dpad [data-direction="left"] { grid-area: left; }
+.dpad [data-direction="down"] { grid-area: down; }
+.dpad [data-direction="right"] { grid-area: right; }
+
+@media (pointer: coarse) { .dpad { display: grid; } }
+
+.game-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
